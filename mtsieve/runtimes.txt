@@ -1,0 +1,21 @@
+/*******************************************************************************
+* Name        : runtimes.txt
+* Author      : Nicholas Cali & Kyle Henderson
+* Date        : 6/28/2021
+* Description : a compilation of the program being run with differing amounts of threads
+* Pledge      : I pledge my honor that I have abided by the Stevens Honor System.
+******************************************************************************/
+./mtsieve -s100 -e200000000 -t1 : 0m3.584s
+./mtsieve -s100 -e200000000 -t2 : 0m2.431s
+./mtsieve -s100 -e200000000 -t3 : 0m2.025s
+./mtsieve -s100 -e200000000 -t4 : 0m1.904s
+./mtsieve -s100 -e200000000 -t5 : 0m1.813s
+./mtsieve -s100 -e200000000 -t6 : 0m1.737s
+./mtsieve -s100 -e200000000 -t7 : 0m1.752s
+./mtsieve -s100 -e200000000 -t8 : 0m1.843s
+
+Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz
+the time improvement started to decline as the thread count went up with some variation
+(such as the .076 decrease from 5 to 6 and then a much bigger increase from 7 to 8).
+Because of this and not getting anywhere near the improvment from 1 to 2 threads in any other jump,
+this does not scale linearly.
